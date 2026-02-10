@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Corezen Health – Premium Clinical Theme */
+    --background: 210 20% 97%;
+    --foreground: 200 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 30% 15%;
+
+    /* Corezen Teal */
+    --primary: 195 29% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Gold accent */
+    --secondary: 42 38% 56%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 18% 93%;
+    --muted-foreground: 215 14% 45%;
+
+    --accent: 42 38% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 22% 88%;
+    --input: 214 22% 88%;
+    --ring: 195 29% 25%;
+
+    --radius: 0.625rem;
+
+    /* Status colors */
+    --status-optimal: 145 63% 32%;
+    --status-elevated: 45 100% 51%;
+    --status-high: 354 70% 54%;
+
+    /* Report */
+    --report-bg: 0 0% 100%;
+    --report-section-bg: 210 25% 98%;
+    --report-border: 214 22% 90%;
+    --report-metric-bg: 210 30% 99%;
+
+    /* Corezen specific */
+    --corezen-teal: 195 29% 25%;
+    --corezen-teal-dark: 196 31% 23%;
+    --corezen-gold: 42 38% 56%;
+    --corezen-gold-light: 41 37% 58%;
+
+    /* Gradient tokens */
+    --gradient-header: linear-gradient(135deg, hsl(195 29% 25%) 0%, hsl(196 31% 23%) 100%);
+    --gradient-report-header: linear-gradient(90deg, hsl(195 29% 25%), hsl(190 25% 33%));
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 200 30% 8%;
+    --foreground: 210 20% 95%;
+    --card: 200 25% 12%;
+    --card-foreground: 210 20% 95%;
+    --popover: 200 25% 12%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 195 29% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 38% 56%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 200 20% 18%;
+    --muted-foreground: 215 15% 65%;
+    --accent: 42 38% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 200 20% 22%;
+    --input: 200 20% 22%;
+    --ring: 195 29% 45%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+  .corezen-header-gradient {
+    background: var(--gradient-header);
+  }
+  .report-header-gradient {
+    background: var(--gradient-report-header);
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+  @page {
+    margin: 12mm;
+  }
+}
